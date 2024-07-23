@@ -15,11 +15,16 @@ import java.util.Optional;
 public class PostServiceImpl implements PostService {
 
     private PostRepository postRepository;
+    private GPTModuleService chatGPTService;
 
     @Autowired
-    public PostServiceImpl(PostRepository postRepository) {
+    public PostServiceImpl(PostRepository postRepository, GPTModuleService chatGPTService) {
         this.postRepository = postRepository;
+        this.chatGPTService = chatGPTService;
     }
+
+
+
 
 
     @Override
@@ -29,6 +34,11 @@ public class PostServiceImpl implements PostService {
         postRepository.save(post);
 
         return mapToPostDto(post);
+    }
+
+    @Override
+    public PostDto createPostFromChatGPT() {
+        return null;
     }
 
     @Override
