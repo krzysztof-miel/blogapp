@@ -14,7 +14,6 @@ import java.util.Map;
 
 @Slf4j
 @RestController
-
 public class GPTModuleController {
 
     @Autowired
@@ -31,16 +30,4 @@ public class GPTModuleController {
             return new ResponseEntity<>("Error: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-//    @PostMapping("/ask")
-//    public ResponseEntity<PostFromChatGPT> askChatGPT() {
-//        try {
-//
-//            PostFromChatGPT postFromChatGPT = service.createPostFromChatGPT();
-//
-//            return  new ResponseEntity<>(postFromChatGPT, HttpStatus.OK);
-//        } catch (IOException e) {
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
 }

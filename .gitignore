@@ -33,4 +33,5 @@ build/
 .vscode/
 
 ### Api key ChatGPT ###
-sk-None-Q0w2l4uDzSRo5yRpBshvT3BlbkFJ6bLpIBsFEv2EEBP34tj9
+.env
+

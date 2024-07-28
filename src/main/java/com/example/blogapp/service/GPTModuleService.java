@@ -17,10 +17,10 @@ import java.nio.charset.StandardCharsets;
 
 @Service
 public class GPTModuleService {
-    @Value("${OPEN_AI_KEY}")
+    @Value("${openai.api.key}")
     private String OPEN_AI_KEY;
 
-    @Value("${OPEN_AI_URL}")
+    @Value("${openai.api.url}")
     private String OPEN_AI_URL;
 
     public String getResponse(String prompt) throws IOException {
