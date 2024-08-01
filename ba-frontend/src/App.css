@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 2.5em;
+}
+
+body {
+  background-color: #e0f7fa; /* Delikatnie błękitne tło */
+  margin: 0; /* Usuń domyślne marginesy */
+}
+
+header {
+  background-color: #003366; /* Granatowe tło nagłówka */
+  color: white; /* Kolor tekstu nagłówka */
+  padding: 20px; /* Padding w nagłówku */
+  border-radius: 8px; /* Zaokrąglenie rogów nagłówka */
+}
+
+main {
+  padding: 20px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 800px;
+}
+
+
+h1 {
+  margin-bottom: 0;
+}
+
+.list-group-item {
+  margin-bottom: 15px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.space-between {
+  margin-bottom: 2rem;
+}
+
+main h2 {
+  margin-top: 0; 
+  margin-bottom: 2rem;
+}

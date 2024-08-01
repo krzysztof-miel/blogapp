@@ -22,11 +22,6 @@ public class PostServiceImpl implements PostService {
         this.postRepository = postRepository;
         this.chatGPTService = chatGPTService;
     }
-
-
-
-
-
     @Override
     public PostDto createPost(PostDto postDto) {
 
