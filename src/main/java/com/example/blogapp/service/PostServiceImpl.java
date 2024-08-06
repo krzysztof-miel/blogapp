@@ -78,6 +78,18 @@ public class PostServiceImpl implements PostService {
         }
     }
 
+    @Override
+    public List<PostDto> getAllPostSortedByDate() {
+        List<Post> posts = postRepository.findAllByOrderByDateDesc();
+        List<PostDto> postDtos = new ArrayList<>();
+
+        for (Post post: posts) {
+            PostDto postModel = mapToPostDto(post);
+            postDtos.add(postModel);
+        }
+        return postDtos;
+    }
+
 
     private PostDto mapToPostDto(Post post) {
         PostDto postDto = new PostDto();

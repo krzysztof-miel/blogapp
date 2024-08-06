@@ -32,8 +32,8 @@ public class PostController {
     }
 
     @GetMapping
-    public ResponseEntity<List<PostDto>> getPosts() {
-        List<PostDto> posts = postService.getAllPosts();
+    public ResponseEntity<List<PostDto>> getSortedPosts() {
+        List<PostDto> posts = postService.getAllPostSortedByDate();
         return ResponseEntity.ok(posts);
     }
 
