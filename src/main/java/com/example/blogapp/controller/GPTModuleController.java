@@ -35,4 +35,18 @@ public class GPTModuleController {
         }
     }
 
+
+    @PostMapping("/ask-json")
+    public ResponseEntity<String> askChatGPTJson(@RequestBody Map<String, String> request) {
+        String prompt = request.get("prompt");
+        try {
+            log.info("askChatGPT completed query: {}", prompt);
+            String response = service.getResponseJson(prompt);
+            return  new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (IOException e) {
+            log.error("Error while processing query: {}", prompt, e);
+            return new ResponseEntity<>("Error: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }
