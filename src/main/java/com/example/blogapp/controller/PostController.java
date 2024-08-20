@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 @Slf4j
 @RequestMapping("/posts")
@@ -52,7 +51,6 @@ public class PostController {
         postService.deletePostById(id);
         return new ResponseEntity<>("Post deleted successfully.", HttpStatus.OK);
     }
-
 
     @PostMapping("/post-from-chat")
     public ResponseEntity<PostDto> createPostFromCharGPT() {
